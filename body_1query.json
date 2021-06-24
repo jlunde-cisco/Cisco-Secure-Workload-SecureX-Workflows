@@ -1,0 +1,33 @@
+{
+    "_id": "60d3351d497d4f76d1826ab4",
+    "id": "60d3351d497d4f76d1826ab4",
+    "filter_type": "UserInventoryFilter",
+    "name": "NotABogon",
+    "description": null,
+    "short_query": {
+        "type": "subnet",
+        "field": "ip",
+        "value": "1.1.1.1/32"
+    },
+    "query": {
+        "type": "and",
+        "filters": [
+            {
+                "field": "vrf_id",
+                "type": "eq",
+                "value": 308
+            },
+            {
+                "field": "ip",
+                "type": "subnet",
+                "value": "1.1.1.1/32"
+            }
+        ]
+    },
+    "public": false,
+    "primary": false,
+    "created_at": 1624454429,
+    "updated_at": 1624554082,
+    "deleted_at": null,
+    "app_scope_id": "5fc794ff497d4f6de7e4732e"
+}

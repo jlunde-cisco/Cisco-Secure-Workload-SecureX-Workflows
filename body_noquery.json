@@ -1,0 +1,19 @@
+{
+    "_id": "60d3351d497d4f76d1826ab4",
+    "id": "60d3351d497d4f76d1826ab4",
+    "filter_type": "UserInventoryFilter",
+    "name": "NotABogon",
+    "description": null,
+    "short_query": {
+        "type": "none"
+    },
+    "query": {
+        "type": "none"
+    },
+    "public": false,
+    "primary": false,
+    "created_at": 1624454429,
+    "updated_at": 1624552605,
+    "deleted_at": null,
+    "app_scope_id": "5fc794ff497d4f6de7e4732e"
+}
