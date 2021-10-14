@@ -1,0 +1,483 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg",
+    "name": "Malicous IP to Secure Workload Inventory Filter",
+    "title": "Malicous IP to Secure Workload Inventory Filter",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "f15ce51e8b0124864f64e67cc420b4f4ac1bb269",
+          "scope": "local",
+          "name": "api secret",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "description": "Input observable value",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOU7X2vYWDAOcbLSJFcIw7Lf0tM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "60d3351d497d4f76d1826ab4",
+          "scope": "local",
+          "name": "target_inventory_filter",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "jlunde",
+          "scope": "local",
+          "name": "tenant",
+          "type": "datatype.string",
+          "description": "Tetration tenant/root scope name",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOWM90sXApn452jUuI7Bbsknkdc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "466eb2788208459a828103c8181c6a88",
+          "scope": "local",
+          "name": "api key",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOSV61tEFHmUTKG8Eo1ImRTRWBo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_type",
+          "type": "datatype.string",
+          "description": "Input observable type",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOKFA1AY3uWVdvcuRGa2Ab8YqYl",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "action required",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOQF23aKOqoGIwWTfmPD0T2SRku",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Malicous IP to Secure Workload Inventory Filter",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01GL53JAPIETO7eQASKNeCsdpFR01NUNfLh",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01R7OOOZJ21N96fsRNOM2FjcG4Ec3ozYfdf",
+        "name": "Condition Block",
+        "title": "Determine Observable Type",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Determine Observable Type",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01R7OOP4C5ZBR4FaMA107yeFD6bprZEDmQc",
+            "name": "Condition Branch",
+            "title": "Is the device_type equal to 'ip'",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.input.variable_workflow_01R7OOOLPOKFA1AY3uWVdvcuRGa2Ab8YqYl$",
+                "operator": "eq",
+                "right_operand": "ip"
+              },
+              "continue_on_failure": false,
+              "display_name": "Is the device_type equal to 'ip'",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01R7OOP6W40HW1CpCVJI0kpQkylSk6GmRSA",
+                "name": "Execute Python Script",
+                "title": "Generate Tetration Auth",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Generate Tetration Auth",
+                  "script": "import sys, datetime, hashlib, hmac, base64, codecs, json\n\n(method,path,body,secret) = sys.argv[1:]\ncontent_type='application/json'\n\ntime_fmt = '%Y-%m-%dT%H:%M:%S+0000'\ntimestamp = datetime.datetime.utcnow().strftime(time_fmt)\n\nchecksum = \"\"\nif method in (\"POST\",\"PUT\",\"DELETE\"): checksum = hashlib.sha256(body.encode('utf-8')).hexdigest()\n\nsigner = hmac.new(codecs.encode(secret,'latin-1'), digestmod=hashlib.sha256)\nsigner.update((method + '\\n').encode('utf-8'))\nsigner.update((path + '\\n').encode('utf-8'))\nsigner.update((checksum + '\\n') .encode('utf-8'))\nsigner.update((content_type + '\\n').encode('utf-8'))\nsigner.update((timestamp + '\\n').encode('utf-8'))\nsignature = base64.b64encode(signer.digest())\nauthorization = signature.decode('utf-8')",
+                  "script_arguments": [
+                    "GET",
+                    "/openapi/v1/filters/inventories/$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc$",
+                    "none",
+                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT$"
+                  ],
+                  "script_queries": [
+                    {
+                      "script_query": "path",
+                      "script_query_name": "path",
+                      "script_query_type": "secure_string"
+                    },
+                    {
+                      "script_query": "timestamp",
+                      "script_query_name": "timestamp",
+                      "script_query_type": "secure_string"
+                    },
+                    {
+                      "script_query": "checksum",
+                      "script_query_name": "checksum",
+                      "script_query_type": "secure_string"
+                    },
+                    {
+                      "script_query": "authorization",
+                      "script_query_name": "authorization",
+                      "script_query_type": "secure_string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01R7OOPCB9O1K5xZ2ekgKDMShQqzqJ1up45",
+                "name": "HTTP Request",
+                "title": "Get current Inventory Filter contents",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "content_type": "application/json",
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "custom_headers": [
+                    {
+                      "name": "Timestamp",
+                      "value": "$activity.definition_activity_01R7OOP6W40HW1CpCVJI0kpQkylSk6GmRSA.output.script_queries.timestamp$"
+                    },
+                    {
+                      "name": "Id",
+                      "value": "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOSV61tEFHmUTKG8Eo1ImRTRWBo$"
+                    },
+                    {
+                      "name": "Authorization",
+                      "value": "$activity.definition_activity_01R7OOP6W40HW1CpCVJI0kpQkylSk6GmRSA.output.script_queries.authorization$"
+                    }
+                  ],
+                  "display_name": "Get current Inventory Filter contents",
+                  "method": "GET",
+                  "relative_url": "/openapi/v1/filters/inventories/$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc$",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": false,
+                    "override_workflow_target_group_criteria": false,
+                    "use_workflow_target": true,
+                    "use_workflow_target_group": false
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN",
+                "name": "Execute Python Script",
+                "title": "Determine if changes are needed and construct body",
+                "type": "python3.script",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "display_name": "Determine if changes are needed and construct body",
+                  "script": "import sys, datetime, hashlib, hmac, base64, codecs, json\n(body,secret,observable_value) = sys.argv[1:]\n### Uncomment for testing\n#f = open('body_noquery.json')\n#f = open('body_1query.json')\n#f = open('body.json')\n#body=json.load(f)\n#observable_value=\"4.4.4.4/32\"\ndef generate_auth(method,path,body,secret):\n    content_type='application/json'\n    time_fmt = '%Y-%m-%dT%H:%M:%S+0000'\n    timestamp = datetime.datetime.utcnow().strftime(time_fmt)\n    checksum = \"\"\n    if method in (\"POST\",\"PUT\",\"DELETE\"): checksum = hashlib.sha256(body.encode('utf-8')).hexdigest()\n    signer = hmac.new(codecs.encode(secret,'latin-1'), digestmod=hashlib.sha256)\n    signer.update((method + '\\n').encode('utf-8'))\n    signer.update((path + '\\n').encode('utf-8'))\n    signer.update((checksum + '\\n') .encode('utf-8'))\n    signer.update((content_type + '\\n').encode('utf-8'))\n    signer.update((timestamp + '\\n').encode('utf-8'))\n    signature = base64.b64encode(signer.digest())\n    authorization = signature.decode('utf-8')\n    return (timestamp,checksum,authorization)\nitem_found = False\naction_required = False\nbody = json.loads(body)\napp_scope_id = body['app_scope_id']\nfilter_id = body['id']\n## Search for IP being reported in current NotABogon Inventory Filter\ntry:\n    if body['short_query']['filters']:\n        print(\"gotcha_with_body\")\n        for i,item in enumerate(body['short_query']['filters']):\n            print(item)\n            if item['field']==\"ip\" and item['value']==observable_value:\n                item_found=True\n                action_required=False\n                print('Found!')\n            else:\n                action_required=True\n                skip=False\nexcept KeyError:\n    if 'short_query' in body and body['short_query']['type'] != 'none':\n        print(\"gotcha with part body\")\n        if body['short_query']['value']==observable_value:\n            item_found=True\n            action_required=False\n            print('Found!')\n        else:\n            old_entry=body.pop('short_query')\n            action_required=True\n            skip=False\n            print(old_entry)\n    else:\n        action_required=True\n        query = {\n                \"type\": \"subnet\",\n                \"field\": \"ip\",\n                \"value\": observable_value+'/32'\n            }\n        body['short_query'] = query\n        skip=True\n## If IP not found in current inventory filter then add it to current filter\nif item_found==False and action_required==True and not skip:\n    query = {\n                \"type\": \"subnet\",\n                \"field\": \"ip\",\n                \"value\": observable_value+'/32'\n            }\n    try:\n        body['short_query']['filters'].append(query)\n    except KeyError:\n        body['short_query']={}\n        body['short_query']['type'] = \"or\"\n        body['short_query']['filters'] = []\n        body['short_query']['filters'].append(query)\n        body['short_query']['filters'].append(old_entry)\n(update_body,update_timestamp,update_checksum,update_auth)=(None,None,None,None)\nif action_required==True:\n    if body['query']:\n        del body['query']\n        update_body=json.dumps(body)\n        (update_timestamp,update_checksum,update_auth)=generate_auth('PUT','/openapi/v1/filters/inventories/'+filter_id,update_body,secret)\nprint(update_body,update_timestamp,update_checksum,update_auth)\nprint()",
+                  "script_arguments": [
+                    "$activity.definition_activity_01R7OOPCB9O1K5xZ2ekgKDMShQqzqJ1up45.output.response_body$",
+                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT$",
+                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.input.variable_workflow_01R7OOOLPOU7X2vYWDAOcbLSJFcIw7Lf0tM$"
+                  ],
+                  "script_queries": [
+                    {
+                      "script_query": "action_required",
+                      "script_query_name": "action_required",
+                      "script_query_type": "string"
+                    },
+                    {
+                      "script_query": "update_timestamp",
+                      "script_query_name": "update_timestamp",
+                      "script_query_type": "secure_string"
+                    },
+                    {
+                      "script_query": "update_body",
+                      "script_query_name": "update_body",
+                      "script_query_type": "string"
+                    },
+                    {
+                      "script_query": "update_checksum",
+                      "script_query_name": "update_checksum",
+                      "script_query_type": "secure_string"
+                    },
+                    {
+                      "script_query": "update_auth",
+                      "script_query_name": "update_auth",
+                      "script_query_type": "secure_string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01R7OOPN3KGLI3CfwfNamAv74aHcFKWW7OT",
+                "name": "Condition Block",
+                "title": "Update Action Required?",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Update Action Required?",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01R7OOPS239N35FJNAx8BDXDJ5C7GvvKB4m",
+                    "name": "Condition Branch",
+                    "title": "action required = true",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.action_required$",
+                        "operator": "eq",
+                        "right_operand": "True"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "action required = true",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01R7OOPUJ8HPQ2fItMxU5qqjo76TCi2uUkc",
+                        "name": "HTTP Request",
+                        "title": "Update Inventory Filter with new body",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "body": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.update_body$",
+                          "content_type": "application/json",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Timestamp",
+                              "value": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.update_timestamp$"
+                            },
+                            {
+                              "name": "Id",
+                              "value": "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOSV61tEFHmUTKG8Eo1ImRTRWBo$"
+                            },
+                            {
+                              "name": "Authorization",
+                              "value": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.update_auth$"
+                            },
+                            {
+                              "name": "X-Tetration-Cksum",
+                              "value": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.update_checksum$"
+                            }
+                          ],
+                          "display_name": "Update Inventory Filter with new body",
+                          "method": "PUT",
+                          "relative_url": "/openapi/v1/filters/inventories/$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc$",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": false,
+                            "override_workflow_target_group_criteria": false,
+                            "use_workflow_target": true,
+                            "use_workflow_target_group": false
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  },
+                  {
+                    "unique_name": "definition_activity_01R7OOQ0JXPWR71d2HURCLoDSpgou9iXGQd",
+                    "name": "Condition Branch",
+                    "title": "action required = false",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.action_required$",
+                        "operator": "eq",
+                        "right_operand": "False"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "action required = false",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01R7OOQ39RRBS0KaLJZZX8GLXoxRZpxhzGf",
+                        "name": "Completed",
+                        "title": "Completed",
+                        "type": "logic.completed",
+                        "base_type": "activity",
+                        "properties": {
+                          "completion_type": "succeeded",
+                          "continue_on_failure": false,
+                          "display_name": "Completed",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01R7OOQ88UUSZ2mfX4PB7U2ejuOfNozZ2tu",
+            "name": "Condition Branch",
+            "title": "Unsupported Observable Type",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.input.variable_workflow_01R7OOOLPOKFA1AY3uWVdvcuRGa2Ab8YqYl$",
+                  "operator": "ne",
+                  "right_operand": "ip"
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.input.variable_workflow_01R7OOOLPOKFA1AY3uWVdvcuRGa2Ab8YqYl$",
+                  "operator": "eq",
+                  "right_operand": "device"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Unsupported Observable Type",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01R7OOQAHSTBQ54AAFhtzFDDn9H90IlPiIC",
+                "name": "Completed",
+                "title": "Completed",
+                "type": "logic.completed",
+                "base_type": "activity",
+                "properties": {
+                  "completion_type": "succeeded",
+                  "continue_on_failure": false,
+                  "display_name": "Completed",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m"
+    ]
+  },
+  "categories": {
+    "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m": {
+      "unique_name": "category_01FM7CGPZZCMY0KcvgiGjVH5UaB4y4aDJ7m",
+      "name": "response",
+      "title": "response",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  },
+  "targets": {
+    "definition_target_01GL53JAPIETO7eQASKNeCsdpFR01NUNfLh": {
+      "unique_name": "definition_target_01GL53JAPIETO7eQASKNeCsdpFR01NUNfLh",
+      "name": "Tetration - Tet-Pov-RTP1 - SWC",
+      "title": "Tetration - Tet-Pov-RTP1 - SWC",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": false,
+        "display_name": "Tetration - Tet-Pov-RTP1 - SWC",
+        "host": "tet-pov-rtp1.cpoc.co",
+        "no_runtime_user": true,
+        "protocol": "https"
+      }
+    }
+  }
+}
