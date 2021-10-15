@@ -1,4 +1,4 @@
-# Cisco Secure Workload - Secure-X Workflows	
+# Cisco Secure Workload aka Tetration - SecureX Workflows	
 
 These workflows can be downloaded as JSON files, and imported into Cisco Secure-X orchestrator. The value of these is that you can quickly push malicious IP addresses, or malicious hashes from a Secure-X incident or casebook into Cisco Secure Workload as an inventory filter. These inventory filters can be used within Secure Workload policies in order to quickly block possible malicious traffic within your organization, and/or group workloads that may be running processes with known malicious hashes in order to segement them off from the rest of the infrastructure until the processes are dealt with.
 
