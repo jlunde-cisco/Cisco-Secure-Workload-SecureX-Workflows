@@ -4,14 +4,20 @@ These workflows can be downloaded as JSON files, and imported into Cisco Secure-
 
 ![Quick Video!](Secure-X-ReadMe.gif)
 
-The pre-requisites are that you already have an inventory filter created (one malicious IP addresses, and one for malicious hashes) that you wish to push either the 1) Malicious IP addresses, or 2) Malicious hashes into, and you must have an API Key generated for your Cisco Secure Workload instance.
+# Pre-Requisites:
+- Create an inventory filter within Secure Workload for Malicious IP addresses, and note the filter-ID
+- Create an inventory filter within SEcure Workload for Malicious hashes, and note the filter-ID
+- Create an API key from within Cisco Secure Workload for use within the workflow(s)
 
-# After Importing...
+# In Cisco SecureX
 
+ - Click into the 'orchestration' tab within the SecureX header (if you have not already, you may have to request this feature)
+ - Import the workflow by clicking 'import' within the orchestration splash screen
  - Open the Workflow and click on the 'start' circle
  - On the right-hand side (you may need to scroll down) fill in the variables with your information (see picture below)
  - If you dont know your inventory filter id, simply open the CSW UI, and open that inventory filter. It will be the value in the URL after '?filter_id='
 
+After importing, and filling in your variable information, you should be able to run these from UI's like SecureX, Cisco Cloud Analytics, Threat Response, and any webpage that you have running with the SecureX ribbon! See the video in this readme for an example!
 
 ![See how here!](https://github.com/jlunde-cisco/SecureX/blob/main/workflow_edits.png)
 
