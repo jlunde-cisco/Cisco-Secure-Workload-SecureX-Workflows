@@ -9,73 +9,6 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "f15ce51e8b0124864f64e67cc420b4f4ac1bb269",
-          "scope": "local",
-          "name": "api secret",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "input",
-          "name": "observable_value",
-          "type": "datatype.string",
-          "description": "Input observable value",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01R7OOOLPOU7X2vYWDAOcbLSJFcIw7Lf0tM",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "60d3351d497d4f76d1826ab4",
-          "scope": "local",
-          "name": "target_inventory_filter",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "jlunde",
-          "scope": "local",
-          "name": "tenant",
-          "type": "datatype.string",
-          "description": "Tetration tenant/root scope name",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01R7OOOLPOWM90sXApn452jUuI7Bbsknkdc",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "466eb2788208459a828103c8181c6a88",
-          "scope": "local",
-          "name": "api key",
-          "type": "datatype.string",
-          "is_required": true,
-          "is_invisible": false
-        },
-        "unique_name": "variable_workflow_01R7OOOLPOSV61tEFHmUTKG8Eo1ImRTRWBo",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
           "value": "",
           "scope": "input",
           "name": "observable_type",
@@ -98,6 +31,73 @@
           "is_invisible": false
         },
         "unique_name": "variable_workflow_01R7OOOLPOQF23aKOqoGIwWTfmPD0T2SRku",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "be48ac49bf8d2939d79e00c7f57d9cad9f1c4281",
+          "scope": "local",
+          "name": "api secret",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YTQEYA92AY14Fmdba1lmNLudON6BFlydk",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "62b324b2497d4f3edc86b3b1",
+          "scope": "local",
+          "name": "target_inventory_filter",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "observable_value",
+          "type": "datatype.string",
+          "description": "Input observable value",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOU7X2vYWDAOcbLSJFcIw7Lf0tM",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "jlunde",
+          "scope": "local",
+          "name": "tenant",
+          "type": "datatype.string",
+          "description": "Tetration tenant/root scope name",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOWM90sXApn452jUuI7Bbsknkdc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "4210999f471e4300869074330f0315db",
+          "scope": "local",
+          "name": "api key",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01R7OOOLPOSV61tEFHmUTKG8Eo1ImRTRWBo",
         "object_type": "variable_workflow"
       }
     ],
@@ -166,7 +166,7 @@
                     "GET",
                     "/openapi/v1/filters/inventories/$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOVGO3TP99td0YIV8QH2tRwzJQc$",
                     "none",
-                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT$"
+                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01YTQEYA92AY14Fmdba1lmNLudON6BFlydk$"
                   ],
                   "script_queries": [
                     {
@@ -203,6 +203,7 @@
                 "properties": {
                   "action_timeout": 180,
                   "allow_auto_redirect": true,
+                  "allow_headers_redirect": false,
                   "content_type": "application/json",
                   "continue_on_error_status_code": false,
                   "continue_on_failure": false,
@@ -247,10 +248,10 @@
                   "action_timeout": 180,
                   "continue_on_failure": false,
                   "display_name": "Determine if changes are needed and construct body",
-                  "script": "import sys, datetime, hashlib, hmac, base64, codecs, json\n(body,secret,observable_value) = sys.argv[1:]\n### Uncomment for testing\n#f = open('body_noquery.json')\n#f = open('body_1query.json')\n#f = open('body.json')\n#body=json.load(f)\n#observable_value=\"4.4.4.4/32\"\ndef generate_auth(method,path,body,secret):\n    content_type='application/json'\n    time_fmt = '%Y-%m-%dT%H:%M:%S+0000'\n    timestamp = datetime.datetime.utcnow().strftime(time_fmt)\n    checksum = \"\"\n    if method in (\"POST\",\"PUT\",\"DELETE\"): checksum = hashlib.sha256(body.encode('utf-8')).hexdigest()\n    signer = hmac.new(codecs.encode(secret,'latin-1'), digestmod=hashlib.sha256)\n    signer.update((method + '\\n').encode('utf-8'))\n    signer.update((path + '\\n').encode('utf-8'))\n    signer.update((checksum + '\\n') .encode('utf-8'))\n    signer.update((content_type + '\\n').encode('utf-8'))\n    signer.update((timestamp + '\\n').encode('utf-8'))\n    signature = base64.b64encode(signer.digest())\n    authorization = signature.decode('utf-8')\n    return (timestamp,checksum,authorization)\nitem_found = False\naction_required = False\nbody = json.loads(body)\napp_scope_id = body['app_scope_id']\nfilter_id = body['id']\n## Search for IP being reported in current NotABogon Inventory Filter\ntry:\n    if body['short_query']['filters']:\n        print(\"gotcha_with_body\")\n        for i,item in enumerate(body['short_query']['filters']):\n            print(item)\n            if item['field']==\"ip\" and item['value']==observable_value:\n                item_found=True\n                action_required=False\n                print('Found!')\n            else:\n                action_required=True\n                skip=False\nexcept KeyError:\n    if 'short_query' in body and body['short_query']['type'] != 'none':\n        print(\"gotcha with part body\")\n        if body['short_query']['value']==observable_value:\n            item_found=True\n            action_required=False\n            print('Found!')\n        else:\n            old_entry=body.pop('short_query')\n            action_required=True\n            skip=False\n            print(old_entry)\n    else:\n        action_required=True\n        query = {\n                \"type\": \"subnet\",\n                \"field\": \"ip\",\n                \"value\": observable_value+'/32'\n            }\n        body['short_query'] = query\n        skip=True\n## If IP not found in current inventory filter then add it to current filter\nif item_found==False and action_required==True and not skip:\n    query = {\n                \"type\": \"subnet\",\n                \"field\": \"ip\",\n                \"value\": observable_value+'/32'\n            }\n    try:\n        body['short_query']['filters'].append(query)\n    except KeyError:\n        body['short_query']={}\n        body['short_query']['type'] = \"or\"\n        body['short_query']['filters'] = []\n        body['short_query']['filters'].append(query)\n        body['short_query']['filters'].append(old_entry)\n(update_body,update_timestamp,update_checksum,update_auth)=(None,None,None,None)\nif action_required==True:\n    if body['query']:\n        del body['query']\n        update_body=json.dumps(body)\n        (update_timestamp,update_checksum,update_auth)=generate_auth('PUT','/openapi/v1/filters/inventories/'+filter_id,update_body,secret)\nprint(update_body,update_timestamp,update_checksum,update_auth)\nprint()",
+                  "script": "from distutils.log import error\nimport sys, datetime, hashlib, hmac, base64, codecs, json\n(body,secret,observable_value) = sys.argv[1:]\n\n## Set some variables needed for later\nnew_body={}\nitem_found = False\nsolo = False\naction_required = False\nbody = json.loads(body)\napp_scope_id = body['app_scope_id']\nfilter_id = body['id']\n\n## Required authentication params needed for Cisco Secure Workload API calls\ndef generate_auth(method,path,body,secret):\n    content_type='application/json'\n    time_fmt = '%Y-%m-%dT%H:%M:%S+0000'\n    timestamp = datetime.datetime.utcnow().strftime(time_fmt)\n    checksum = \"\"\n    if method in (\"POST\",\"PUT\",\"DELETE\"): checksum = hashlib.sha256(body.encode('utf-8')).hexdigest()\n    signer = hmac.new(codecs.encode(secret,'latin-1'), digestmod=hashlib.sha256)\n    signer.update((method + '\\n').encode('utf-8'))\n    signer.update((path + '\\n').encode('utf-8'))\n    signer.update((checksum + '\\n') .encode('utf-8'))\n    signer.update((content_type + '\\n').encode('utf-8'))\n    signer.update((timestamp + '\\n').encode('utf-8'))\n    signature = base64.b64encode(signer.digest())\n    authorization = signature.decode('utf-8')\n    return (timestamp,checksum,authorization)\n\n## Search for IP being reported in current set Inventory Filter\nif 'filters' in body['short_query'].keys():\n    for i,item in enumerate(body['short_query']['filters']):\n        if 'filter' in item.keys() and item['filter']['value'] == observable_value + '/32':\n            item_found=True\n            action_required=False\n            print('Found!')\n            break\n        elif 'value' in item.keys() and item['value'] == observable_value + '/32':\n            item_found=True\n            action_required=False\n            print('Found!')\n            break\n    else: \n        old_entry=body.pop('short_query')\n        action_required=True\n        skip=False\nelif 'value' in body['short_query'].keys() and body['short_query']['value'] == observable_value + '/32':\n            item_found=True\n            action_required=False\nelif 'value' in body['short_query'].keys() and body['short_query']['value'] !=  observable_value + '/32':\n    old_entry=body.pop('short_query')\n    print(old_entry)\n    action_required=True\n    skip=False\nelse: ## This will be the FIRST entry put into this particular inventory filter\n    old_entry=body.pop('short_query')\n    print(old_entry)\n    action_required=True\n    solo=True\n    skip=False\n\n## If IP not found in current inventory filter then add it to current filter\nif item_found==False and action_required==True and not skip and solo==False:\n    query = {   \n                \"type\": \"subnet\",\n                \"field\": \"ip\",\n                \"value\": observable_value+'/32'\n            }\n    try:\n        new_body['short_query']={}\n        new_body['short_query']['type'] = 'or'\n        new_body['short_query']['filters']=[]\n        new_body['short_query']['filters'].append(query)\n        try:\n            for entry in old_entry['filters']:\n                new_body['short_query']['filters'].append(entry)\n        except:\n            add_old = {   \n                        \"type\": old_entry['type'],\n                        \"field\": old_entry['field'],\n                        \"value\": old_entry['value']\n                      }\n            new_body['short_query']['filters'].append(add_old)\n    except KeyError:\n        print(error)\n\nelif item_found==False and action_required==True and not skip and solo==True:\n    new_body['short_query'] = {   \n              \"type\": \"subnet\",\n              \"field\": \"ip\",\n              \"value\": observable_value+'/32'\n            }\n\n#Set these temporarily with null values so that we can generate them with the generate_auth module based on the payload\n(update_body,update_timestamp,update_checksum,update_auth)=(None,None,None,None)\nif action_required==True:\n    update_body=json.dumps(new_body)\n    (update_timestamp,update_checksum,update_auth)=generate_auth('PUT','/openapi/v1/filters/inventories/'+filter_id,update_body,secret)\n\nprint(update_body)",
                   "script_arguments": [
                     "$activity.definition_activity_01R7OOPCB9O1K5xZ2ekgKDMShQqzqJ1up45.output.response_body$",
-                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01R7OOOLPOXVF3UHypAnTuyKvJ03yaGuSeT$",
+                    "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.local.variable_workflow_01YTQEYA92AY14Fmdba1lmNLudON6BFlydk$",
                     "$workflow.definition_workflow_01R7OOOLY76RL3lbbmj4kFpXE469kyoZWzg.input.variable_workflow_01R7OOOLPOU7X2vYWDAOcbLSJFcIw7Lf0tM$"
                   ],
                   "script_queries": [
@@ -324,6 +325,7 @@
                         "properties": {
                           "action_timeout": 180,
                           "allow_auto_redirect": true,
+                          "allow_headers_redirect": false,
                           "body": "$activity.definition_activity_01R7OOPHS6EI479oA80tVeEJYzUvZBZHAhN.output.script_queries.update_body$",
                           "content_type": "application/json",
                           "continue_on_error_status_code": false,
